@@ -161,7 +161,7 @@ public class Manager : MonoBehaviour
         intentosj.text=txtinten + intentos;
         distrac1.transform.position = distrac1Ini;
         source.clip = incorrect;
-        source.Play();
+       
     }
 
     public void DropDistrac2()
@@ -172,7 +172,7 @@ public class Manager : MonoBehaviour
         intentosj.text = txtinten + intentos;
         distrac2.transform.position = distrac2Ini;
         source.clip = incorrect;
-        source.Play();
+       
 
     }
     public void DropLettreOne()
@@ -189,14 +189,14 @@ public class Manager : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreOne.name;
             source.clip = sonido1[cont];
-            source.Play();      
+                 
         }
       
         else
         {
             lettreOne.transform.position = lettreOneIni;
             source.clip = incorrect;
-            source.Play();
+            
         }
 
     }
@@ -217,7 +217,7 @@ public class Manager : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreTwo.name;
             source.clip = sonido2[cont];
-            source.Play();
+            
 
            
         }
@@ -225,7 +225,7 @@ public class Manager : MonoBehaviour
         {
             lettreTwo.transform.position = lettreTwoIni;
             source.clip = incorrect;
-            source.Play();
+           
         }
 
     }
@@ -300,7 +300,7 @@ public class Manager : MonoBehaviour
 
         if (cont == 10) {
             source.clip = gana;
-            source.Play();
+            
         }
 
         if (cont >= 10)

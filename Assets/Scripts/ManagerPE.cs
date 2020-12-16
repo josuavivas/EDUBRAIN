@@ -35,15 +35,14 @@ public class ManagerPE : MonoBehaviour
     public Canvas canvas;
 
 
-    private string[] nombresPalabra1 = { "Abeja1", "Araña1", "Cocodrilo1", "Conejo1", "Gallina1", "Hipopotamo1", "Murcielago1", "Oveja1", "Perro1", "Tigre1" };
+   
+    private string[] nombresPalabra1 ={ "3", "2945", "6", "7", "8", "15", "29", "42", "57", "63"};
 
-    private string[] nombresImagen1 = { "Abeja1", "Araña1", "Cocodrilo1", "Conejo1", "Gallina1", "Hipopotamo1", "Murcielago1", "Oveja1", "Perro1", "Tigre1" };
+    private string[] nombresImagen1 = { "3", "2945", "6", "7", "8", "15", "29", "42", "57", "63"};
 
-
-
-    private string[] nombresPalabraDis1 = { "Aveja", "Arana", "Cocobrilo", "Konejo", "Galina", "Hipopólamo", "Murcélago", "Obeja", "Pero", "Tegri" };
-    private string[] nombresPalabraDis2 = { "Avega", "Aroña", "Cucodrilu", "Cunejo", "Gayina", "Hipupótamo", "Murcilagu", "Uveja", "Perruo", "Tigri" };
-    private string[] nombresPalabraDis3 = { "Abija", "Eraña", "Cucudrilo", "Cunego", "Gahina", "Hiqopótamo", "Morciélagu", "Ovega", "Pirro", "Tygre" };
+    private string[] nombresPalabraDis1 = { "8", "3046", "3", "1", "0", "18", "93", "43", "87", "67" };
+    private string[] nombresPalabraDis2 = { "0", "8046", "0", "2", "3", "48", "97", "74", "67", "68" };
+    private string[] nombresPalabraDis3 = { "6", "28", "8", "4", "6", "46", "48", "71", "87", "93" };
 
 
     Vector3 lettreOneIni, distrac1Ini, distrac2Ini, distrac3Ini;
@@ -99,7 +98,7 @@ public class ManagerPE : MonoBehaviour
          }*/
         puntostab.SetActive(false);
 
-
+        
         palabra1 = lettreOne.GetComponent<Image>();
         palabra1.sprite = Resources.Load<Sprite>("Imagenes/palabras/" + nombresPalabra1[cont]);
 
@@ -124,6 +123,7 @@ public class ManagerPE : MonoBehaviour
 
         iniScaleLettreOne = lettreOne.transform.localScale;
 
+       
     }
 
 
@@ -158,7 +158,7 @@ public class ManagerPE : MonoBehaviour
         intentosj.text = txtinten + intentos;
         distrac1.transform.position = distrac1Ini;
         source.clip = incorrect;
-        source.Play();
+
     }
 
     public void DropDistrac2()
@@ -169,7 +169,7 @@ public class ManagerPE : MonoBehaviour
         intentosj.text = txtinten + intentos;
         distrac2.transform.position = distrac2Ini;
         source.clip = incorrect;
-        source.Play();
+
 
     }
 
@@ -182,7 +182,7 @@ public class ManagerPE : MonoBehaviour
         intentosj.text = txtinten + intentos;
         distrac3.transform.position = distrac3Ini;
         source.clip = incorrect;
-        source.Play();
+
 
     }
 
@@ -200,14 +200,14 @@ public class ManagerPE : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreOne.name;
             source.clip = sonido1[cont];
-            source.Play();
+ 
         }
 
         else
         {
             lettreOne.transform.position = lettreOneIni;
             source.clip = incorrect;
-            source.Play();
+
         }
 
     }
@@ -239,7 +239,11 @@ public class ManagerPE : MonoBehaviour
 
 
         lettreOne.transform.localScale = iniScaleLettreOne;
-
+        if(cont==10)
+        {
+            SceneManager.LoadScene("Principal");
+        }
+        
     }
 
     void Update()
@@ -255,7 +259,7 @@ public class ManagerPE : MonoBehaviour
         if (oneCorrect == true)
         {
 
-            if (cont >= 10)
+            if (cont == 9)
             {
 
                 totintentos.text = "SUS INTENTOS FUERON:" + intentos;
@@ -274,9 +278,9 @@ public class ManagerPE : MonoBehaviour
         if (cont == 10)
         {
             source.clip = gana;
-            source.Play();
+            SceneManager.LoadScene("Principal");
         }
-        if (cont >= 10)
+        if (cont == 9)
         {
             if (sc2 != null)
             {
@@ -303,10 +307,11 @@ public class ManagerPE : MonoBehaviour
             }
             else
             {
-
+                SceneManager.LoadScene("MenuPE");
+                
                 sc = new score(0, "" + intentos, "" + DateTime.Now, "completado", cont);
 
-                // db.GuardarScore(sc, "PalabraEscondida");
+                //db.GuardarScore(sc, "PalabraEscondida");
                 PostPuntaje postPuntaje = new PostPuntaje()
                 {
                     score = intentos,
@@ -320,7 +325,7 @@ public class ManagerPE : MonoBehaviour
 
                 StartCoroutine(PostAgregarPuntaje(postJuegoCreateUrl, postPuntaje));
             }
-            SceneManager.LoadScene("Principal");
+            SceneManager.LoadScene("MenuPE");
         }
         else
         {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "El juego ir\xE1 contando el n\xFAmero de intentos que  el ni\xF1o ha realizado
+  m_text: "El juego ir\xE1 contando el n\xFAmero de intentos que  el joven ha realizado
     hasta  resolver la actividad."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_margin: {x: 179.20137, y: 0, z: 150.42786, w: 0}
   m_textInfo:
     textComponent: {fileID: 224129643}
-    characterCount: 99
+    characterCount: 100
     spriteCount: 0
     spaceCount: 18
     wordCount: 17
@@ -1025,8 +1025,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "El ni\xF1o deber\xE1   asociar en la casilla la letra que corresponda a
-    las im\xE1genes visualizadas como pistas para resolver el ejercicio"
+  m_text: "El joven deber\xE1   asociar en la casilla la letra que corresponda a las
+    im\xE1genes visualizadas como pistas para resolver el ejercicio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_margin: {x: 179.20137, y: 0, z: 155.4089, w: 0}
   m_textInfo:
     textComponent: {fileID: 389855424}
-    characterCount: 130
+    characterCount: 131
     spriteCount: 0
     spaceCount: 22
     wordCount: 21
@@ -1160,8 +1160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.9, y: -32.9}
-  m_SizeDelta: {x: 600, y: 50}
+  m_AnchoredPosition: {x: -25.9, y: -35}
+  m_SizeDelta: {x: 555.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704289015
 MonoBehaviour:
@@ -1181,8 +1181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ayuda al ni\xF1o a  desarrollar  su  destreza  de identificar y discriminar
-    \ la Letra incorrecta."
+  m_text: Ayuda al joven a  desarrollar  su  destreza  de identificar y discriminar  la
+    Letra incorrecta.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1210,14 +1210,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 258
+  m_textAlignment: 264
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_margin: {x: 179.20137, y: 0, z: 180.31438, w: -4.8341365}
   m_textInfo:
     textComponent: {fileID: 704289015}
-    characterCount: 94
+    characterCount: 95
     spriteCount: 0
     spaceCount: 18
     wordCount: 14
@@ -1615,8 +1615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.317772, y: 0.9}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324229206
 MonoBehaviour:
@@ -2133,7 +2133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 27a979f7b162f5e42b74d3d71697f949, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 959f2f43a7b7abb48b4db045a3dc1ec3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
